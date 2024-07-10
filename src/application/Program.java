@@ -26,6 +26,7 @@ public class Program {
         for (Seller obj : list) {
             System.out.println(obj);
         }
+
         System.out.println("\n=== TEST 4: seller insert ===");
         Seller newSeller = new Seller(null, "Greg", "gerg@gmail.com", new Date(), 4000.0, d);
         sellerDao.insert(newSeller);
@@ -37,5 +38,9 @@ public class Program {
         seller.setEmail("martha@gmail.com");
         sellerDao.update(seller);
         System.out.println("Uptade completed!");
+
+        System.out.println("\n=== TEST 6: seller delete ===");
+        sellerDao.delete(11);
+        System.out.println("Delete completed!");
     }
 }
